@@ -1,3 +1,5 @@
+{{-- BACKPACK DEMO FILE --}}
+{{-- It makes sure the login inputs are pre-populated with the default admin user. --}}
 @extends(backpack_view('layouts.plain'))
 
 @section('content')
@@ -13,7 +15,7 @@
                             <label class="control-label" for="{{ $username }}">{{ config('backpack.base.authentication_column_name') }}</label>
 
                             <div>
-                                <input type="text" class="form-control{{ $errors->has($username) ? ' is-invalid' : '' }}" name="{{ $username }}" value="{{ old($username) }}" id="{{ $username }}">
+                                <input type="text" class="form-control{{ $errors->has($username) ? ' is-invalid' : '' }}" name="{{ $username }}" value="{{ old($username) ?? 'admin@example.com' }}" id="{{ $username }}">
 
                                 @if ($errors->has($username))
                                     <span class="invalid-feedback">
@@ -27,7 +29,7 @@
                             <label class="control-label" for="password">{{ trans('backpack::base.password') }}</label>
 
                             <div>
-                                <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="password">
+                                <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="password" value="{{ old('username')?'':'admin' }}">
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">

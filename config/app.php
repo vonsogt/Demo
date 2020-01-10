@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'Asia/Jakarta',
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale' => 'id',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'id',
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -211,7 +211,7 @@ return [
         * Backpack Aliases...
         */
         'Alert' => Prologue\Alerts\Facades\Alert::class,
-        'CRUD'  => Backpack\CRUD\BackpackServiceProvider::class,
+        'CRUD'  => Backpack\CRUD\CrudServiceProvider::class,
         'Form'  => Collective\Html\FormFacade::class,
         'Html'  => Collective\Html\HtmlFacade::class,
 

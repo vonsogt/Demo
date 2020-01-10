@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'admin@vree.dom', 'name' => 'Administrator Vreedom'],
+    'from' => ['address' => 'demo@example.com', 'name' => 'Backpack for Laravel Demo'],
 
     /*
     |--------------------------------------------------------------------------
