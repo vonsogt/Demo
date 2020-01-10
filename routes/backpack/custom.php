@@ -6,6 +6,8 @@
 // This route file is loaded automatically by Backpack\Base.
 // Routes you generate using Backpack\Generators will be placed here.
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('api/article', 'App\Http\Controllers\Api\ArticleController@index');
 Route::get('api/article-search', 'App\Http\Controllers\Api\ArticleController@search');
 Route::get('api/article/{id}', 'App\Http\Controllers\Api\ArticleController@show');
@@ -28,10 +30,10 @@ Route::group([
         // disable delete and bulk delete for all CRUDs
         $cruds = ['article', 'category', 'tag', 'monster', 'icon', 'product', 'page', 'menu-item', 'user', 'role', 'permission'];
         foreach ($cruds as $name) {
-            Route::delete($name.'/{id}', function () {
+            Route::delete($name . '/{id}', function () {
                 return false;
             });
-            Route::post($name.'/bulk-delete', function () {
+            Route::post($name . '/bulk-delete', function () {
                 return false;
             });
         }

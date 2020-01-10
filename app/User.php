@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Alert;
+use Prologue\Alerts\Facades\Alert;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
